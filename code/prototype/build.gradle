@@ -1,0 +1,17 @@
+plugins {
+  id "application"
+}
+
+mainClassName = "${group}.prototype.Main"
+
+
+
+repositories {
+  maven { url "https://jitpack.io" }
+}
+
+dependencies {
+  compile 'com.github.website-navigator.account:api:-SNAPSHOT'
+  compile 'com.github.website-navigator.account:sample:-SNAPSHOT'
+  compile 'io.vertx:vertx-web:3.3.2'
+}
