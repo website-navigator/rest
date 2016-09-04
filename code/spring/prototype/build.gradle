@@ -1,0 +1,26 @@
+buildscript {
+  repositories {
+    mavenCentral()
+  }
+  dependencies {
+    classpath("org.springframework.boot:spring-boot-gradle-plugin:1.4.0.RELEASE")
+  }
+}
+
+apply plugin: 'spring-boot'
+
+jar {
+  baseName = 'websitenavigator-rest-service'
+  version = project.version
+}
+
+repositories {
+  maven {url "https://jitpack.io"}
+}
+
+dependencies {
+  compile 'com.github.website-navigator.account:api:-SNAPSHOT'
+  compile 'com.github.website-navigator.account:sample:-SNAPSHOT'
+  compile("org.springframework.boot:spring-boot-starter-web")
+  testCompile('org.springframework.boot:spring-boot-starter-test')
+}
