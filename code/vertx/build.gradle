@@ -2,7 +2,6 @@
 
 def javaProjects = []
 
-javaProjects << ':'
 javaProjects << ':prototype'
 
 project(javaProjects) {
